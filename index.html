@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streamberry</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Streamberry</h1>
+        
+        <div>
+            <label for="campoPesquisa">Pesquisar filme:</label>
+            <input type="text" id="campoPesquisa" placeholder="Digite o título do filme...">
+            <button onclick="pesquisarFilme()">Pesquisar</button>
+        </div>
+
+        <form id="filmeForm">
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" placeholder="Título" required>
+
+            <label for="genero">Gênero:</label>
+            <input type="text" id="genero" placeholder="Gênero" required>
+
+            <label for="ano">Ano:</label>
+            <input type="number" id="ano" placeholder="Ano" required>
+
+            <label for="avaliacao">Avaliação:</label>
+            <input type="number" id="avaliacao" placeholder="Avaliação" step="0.1" required>
+
+            <button type="submit">Adicionar Filme</button>
+        </form>
+
+        <table id="tabelaFilmes">
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Gênero</th>
+                    <th>Ano</th>
+                    <th>Avaliação</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+        </table>
+
+        <button onclick="mostrarTodosOsFilmes()">Mostrar Todos</button>
+
+        <div id="mensagens" style="margin-top: 20px;"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
